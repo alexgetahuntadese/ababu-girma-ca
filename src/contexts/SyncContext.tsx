@@ -72,7 +72,7 @@ export const SyncProvider: React.FC<SyncProviderProps> = ({ children }) => {
 
     // Get existing session data or create new session
     const existingSession = localStorage.getItem(`session_${newSessionId}`);
-    let sessionData = { participants: [] };
+    let sessionData: any = { participants: [] };
     
     if (existingSession) {
       sessionData = JSON.parse(existingSession);
@@ -89,7 +89,7 @@ export const SyncProvider: React.FC<SyncProviderProps> = ({ children }) => {
       participants: updatedParticipants,
       lastUpdated: Date.now(),
       createdAt: Date.now(),
-      hostId: isHost ? userId : sessionData.hostId || null
+      hostId: isHost ? userId : (sessionData.hostId || null)
     }));
 
     setSessionId(newSessionId);
