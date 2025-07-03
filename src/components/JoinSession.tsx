@@ -34,8 +34,27 @@ const JoinSession = () => {
       }
 
       const sessionData = JSON.parse(existingSession);
+      
+      // Check if session has participants array and validate participant limit
+      if (!sessionData.participants) {
+        toast.error('Invalid session data. Please try again.');
+        setIsJoining(false);
+        return;
+      }
+
       if (sessionData.participants.length >= 25) {
         toast.error('Session is full (25 participants maximum)');
+        setIsJoining(false);
+        return;
+      }
+
+      // Check if user is already in the session
+      const existingParticipant = sessionData.participants.find(
+        (p: any) => p.name.toLowerCase() === userName.toLowerCase()
+      );
+      
+      if (existingParticipant) {
+        toast.error('A participant with this name already exists in the session');
         setIsJoining(false);
         return;
       }
@@ -44,6 +63,7 @@ const JoinSession = () => {
       toast.success('Successfully joined the session!');
       navigate(`/lobby?session=${sessionId}`);
     } catch (error) {
+      console.error('Error joining session:', error);
       toast.error('Failed to join session. Please try again.');
     } finally {
       setIsJoining(false);

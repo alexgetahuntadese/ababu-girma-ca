@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 export interface Participant {
@@ -71,12 +70,15 @@ export const SyncProvider: React.FC<SyncProviderProps> = ({ children }) => {
       avatar: userName.split(' ').map(n => n[0]).join('').toUpperCase()
     };
 
-    // Get existing session data
+    // Get existing session data or create new session
     const existingSession = localStorage.getItem(`session_${newSessionId}`);
     let sessionData = { participants: [] };
     
     if (existingSession) {
       sessionData = JSON.parse(existingSession);
+    } else if (isHost) {
+      // If this is a host creating a new session, initialize it
+      sessionData = { participants: [] };
     }
 
     // Add new participant
@@ -85,7 +87,9 @@ export const SyncProvider: React.FC<SyncProviderProps> = ({ children }) => {
     // Save to localStorage (simulating backend sync)
     localStorage.setItem(`session_${newSessionId}`, JSON.stringify({
       participants: updatedParticipants,
-      lastUpdated: Date.now()
+      lastUpdated: Date.now(),
+      createdAt: Date.now(),
+      hostId: isHost ? userId : sessionData.hostId || null
     }));
 
     setSessionId(newSessionId);
@@ -106,6 +110,7 @@ export const SyncProvider: React.FC<SyncProviderProps> = ({ children }) => {
       );
       
       localStorage.setItem(`session_${sessionId}`, JSON.stringify({
+        ...sessionData,
         participants: updatedParticipants,
         lastUpdated: Date.now()
       }));
@@ -127,10 +132,15 @@ export const SyncProvider: React.FC<SyncProviderProps> = ({ children }) => {
     setParticipants(updatedParticipants);
 
     // Update localStorage
-    localStorage.setItem(`session_${sessionId}`, JSON.stringify({
-      participants: updatedParticipants,
-      lastUpdated: Date.now()
-    }));
+    const existingSession = localStorage.getItem(`session_${sessionId}`);
+    if (existingSession) {
+      const sessionData = JSON.parse(existingSession);
+      localStorage.setItem(`session_${sessionId}`, JSON.stringify({
+        ...sessionData,
+        participants: updatedParticipants,
+        lastUpdated: Date.now()
+      }));
+    }
 
     // Update current user if it's them
     if (currentUser?.id === id) {
