@@ -89,7 +89,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-800">
-      {/* Header */}
       <header className="bg-white/10 backdrop-blur-md border-b border-white/20">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
@@ -104,7 +103,6 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section */}
       <div className="container mx-auto px-4 py-16 text-center">
         <h2 className="text-5xl font-bold text-white mb-6 animate-fade-in">
           Learn Together, Win Together
@@ -113,7 +111,6 @@ const Index = () => {
           Join live quiz sessions with up to 25 participants. Collaborate through video and voice while solving challenges together.
         </p>
 
-        {/* Action Cards */}
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
           <Card className="bg-white/10 backdrop-blur-md border-white/20 hover:bg-white/20 transition-all duration-300 cursor-pointer hover-scale" onClick={handleCreateSession}>
             <CardHeader className="text-center">
@@ -150,7 +147,6 @@ const Index = () => {
           </Card>
         </div>
 
-        {/* Features */}
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <div className="text-center animate-fade-in">
             <div className="mx-auto w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-4">
