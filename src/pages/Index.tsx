@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -7,21 +6,30 @@ import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Users, Video, Trophy, Zap } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useSyncContext } from "@/contexts/SyncContext";
+import JoinSession from "@/components/JoinSession";
+import { toast } from "sonner";
 
 const Index = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [hostName, setHostName] = useState('');
   const navigate = useNavigate();
+  const { joinSession } = useSyncContext();
 
   const handleLogin = () => {
     setIsAuthenticated(true);
   };
 
-  const handleJoinSession = () => {
-    navigate('/lobby');
-  };
-
   const handleCreateSession = () => {
-    navigate('/lobby?host=true');
+    if (!hostName.trim()) {
+      toast.error('Please enter your name to host a session');
+      return;
+    }
+
+    const sessionId = 'QZ-' + Math.random().toString(36).substr(2, 6).toUpperCase();
+    joinSession(sessionId, hostName, true);
+    toast.success('Session created successfully!');
+    navigate(`/lobby?host=true&session=${sessionId}`);
   };
 
   if (!isAuthenticated) {
@@ -105,16 +113,19 @@ const Index = () => {
         </div>
       </header>
 
-      <div className="container mx-auto px-4 py-16 text-center">
-        <h2 className="text-5xl font-bold text-white mb-6 animate-fade-in">
-          Learn Together, Win Together
-        </h2>
-        <p className="text-xl text-white/80 mb-12 max-w-2xl mx-auto animate-fade-in">
-          Join live quiz sessions with up to 25 participants. Collaborate through video and voice while solving challenges together.
-        </p>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h2 className="text-5xl font-bold text-white mb-6 animate-fade-in">
+            Learn Together, Win Together
+          </h2>
+          <p className="text-xl text-white/80 mb-12 max-w-2xl mx-auto animate-fade-in">
+            Join live quiz sessions with up to 25 participants. Collaborate through video and voice while solving challenges together.
+          </p>
+        </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
-          <Card className="bg-white/10 backdrop-blur-md border-white/20 hover:bg-white/20 transition-all duration-300 cursor-pointer hover-scale" onClick={handleCreateSession}>
+        <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+          {/* Host Session */}
+          <Card className="bg-white/10 backdrop-blur-md border-white/20">
             <CardHeader className="text-center">
               <div className="mx-auto w-16 h-16 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center mb-4">
                 <Users className="w-8 h-8 text-white" />
@@ -124,31 +135,58 @@ const Index = () => {
                 Create a new quiz session and invite up to 25 participants
               </CardDescription>
             </CardHeader>
-            <CardContent>
-              <Button className="w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600">
+            <CardContent className="space-y-4">
+              <div>
+                <Label className="text-white/70">Your Name</Label>
+                <Input
+                  value={hostName}
+                  onChange={(e) => setHostName(e.target.value)}
+                  placeholder="Enter your name"
+                  className="bg-white/10 border-white/30 text-white placeholder:text-white/50"
+                />
+              </div>
+              <Button
+                onClick={handleCreateSession}
+                disabled={!hostName.trim()}
+                className="w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600"
+              >
                 Create Session
               </Button>
             </CardContent>
           </Card>
 
-          <Card className="bg-white/10 backdrop-blur-md border-white/20 hover:bg-white/20 transition-all duration-300 cursor-pointer hover-scale" onClick={handleJoinSession}>
+          {/* Join Session */}
+          <JoinSession />
+
+          {/* Quick Join */}
+          <Card className="bg-white/10 backdrop-blur-md border-white/20">
             <CardHeader className="text-center">
               <div className="mx-auto w-16 h-16 bg-gradient-to-r from-orange-400 to-red-500 rounded-full flex items-center justify-center mb-4">
                 <Video className="w-8 h-8 text-white" />
               </div>
-              <CardTitle className="text-white text-2xl">Join a Session</CardTitle>
+              <CardTitle className="text-white text-2xl">Quick Features</CardTitle>
               <CardDescription className="text-white/70">
-                Enter a session ID to join an existing quiz collaboration
+                Everything you need for collaborative learning
               </CardDescription>
             </CardHeader>
-            <CardContent>
-              <Button className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600">
-                Join Session
-              </Button>
+            <CardContent className="space-y-3">
+              <div className="flex items-center space-x-3 text-white/80">
+                <Video className="w-4 h-4" />
+                <span className="text-sm">Live Video & Voice</span>
+              </div>
+              <div className="flex items-center space-x-3 text-white/80">
+                <Users className="w-4 h-4" />
+                <span className="text-sm">Up to 25 Participants</span>
+              </div>
+              <div className="flex items-center space-x-3 text-white/80">
+                <Zap className="w-4 h-4" />
+                <span className="text-sm">Real-time Sync</span>
+              </div>
             </CardContent>
           </Card>
         </div>
 
+        {/* ... keep existing code (feature highlights section) */}
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <div className="text-center animate-fade-in">
             <div className="mx-auto w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-4">
