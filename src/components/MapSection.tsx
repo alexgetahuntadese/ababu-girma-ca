@@ -76,7 +76,7 @@ const MapSection = () => {
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone size={16} className="text-primary shrink-0" />
-                  <span>+251 11 551 2345</span>
+                  <span>+251 911 375 375</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Mail size={16} className="text-primary shrink-0" />
