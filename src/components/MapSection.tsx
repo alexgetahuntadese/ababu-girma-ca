@@ -63,7 +63,7 @@ const MapSection = () => {
                 </span>
               </div>
 
-              <h3 className="font-display font-bold text-lg text-foreground mb-1">Abyssinia Advisory</h3>
+              <h3 className="font-display font-bold text-lg text-foreground mb-1">Ababu Girma Authorized Accounting Firm</h3>
 
               <div className="space-y-2 mt-4 text-sm text-muted-foreground">
                 <div className="flex items-start gap-3">
