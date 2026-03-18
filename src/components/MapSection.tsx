@@ -42,7 +42,7 @@ const MapSection = () => {
           {/* Map iframe */}
           <iframe
             title="Office Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.5!2d38.763!3d9.015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwMDAnNTQuMCJOIDM4wrA0NSc0Ni44IkU!5e0!3m2!1sen!2set!4v1700000000000"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.3!2d38.74!3d9.04!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwMDInMjQuMCJOIDM4wrA0NCcyNC4wIkU!5e0!3m2!1sen!2set!4v1700000000000"
             className="w-full h-[350px] md:h-[450px] grayscale-[30%] contrast-[1.1]"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
