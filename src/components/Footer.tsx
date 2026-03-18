@@ -12,7 +12,7 @@ const Footer = () => {
                 <span className="text-primary-foreground font-display font-bold">A</span>
               </div>
               <span className="font-display font-bold text-lg text-primary-foreground tracking-tight">
-                Abyssinia Advisory
+                Ababu Girma Accounting
               </span>
             </div>
             <p className="text-primary-foreground/60 text-sm leading-relaxed max-w-sm">
