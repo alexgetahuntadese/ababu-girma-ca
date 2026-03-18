@@ -41,7 +41,7 @@ const Footer = () => {
               {[
                 { label: "LinkedIn", href: "#" },
                 { label: "Telegram", href: "#" },
-                { label: "Email Us", href: "mailto:info@abyssinia-advisory.com" },
+                { label: "Email Us", href: "mailto:info@ababugirma-accounting.com" },
               ].map((item) => (
                 <li key={item.label}>
                   <a
