@@ -16,7 +16,7 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-primary-foreground/60 text-sm leading-relaxed max-w-sm">
-              A leading accounting and tax advisory firm in Addis Ababa, serving Ethiopian businesses since 2006. AABE registered, IFRS compliant.
+              Ababu Girma Authorized Accounting Firm — a trusted accounting and tax advisory practice in Gulele (Addisu Gebeya area), Addis Ababa. Serving Ethiopian businesses with integrity.
             </p>
           </div>
 
