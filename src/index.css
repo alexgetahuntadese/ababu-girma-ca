@@ -36,12 +36,12 @@
 
     --radius: 0.75rem;
 
-    --purple-glow: 270 80% 65%;
-    --purple-deep: 270 70% 20%;
-    --purple-surface: 270 40% 97%;
+    --purple-glow: 270 80% 70%;
+    --purple-deep: 270 40% 8%;
+    --purple-surface: 270 28% 14%;
 
-    --sidebar-background: 270 30% 97%;
-    --sidebar-foreground: 270 20% 30%;
+    --sidebar-background: 270 30% 10%;
+    --sidebar-foreground: 270 10% 90%;
     --sidebar-primary: 270 60% 50%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 270 30% 94%;
