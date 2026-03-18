@@ -24,8 +24,8 @@ const Navbar = () => {
           <div className="w-9 h-9 rounded-lg gradient-purple flex items-center justify-center">
             <span className="text-primary-foreground font-display font-bold text-lg">A</span>
           </div>
-          <span className="font-display font-bold text-lg text-foreground tracking-tight">
-            Abyssi<span className="text-primary">nia</span> Advisory
+          <span className="font-display font-bold text-base text-foreground tracking-tight leading-tight">
+            Ababu Girma<br className="md:hidden" /><span className="hidden md:inline"> </span><span className="text-primary text-xs md:text-sm font-semibold">Authorized Accounting</span>
           </span>
         </a>
 

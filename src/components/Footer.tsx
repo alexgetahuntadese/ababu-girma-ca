@@ -12,11 +12,11 @@ const Footer = () => {
                 <span className="text-primary-foreground font-display font-bold">A</span>
               </div>
               <span className="font-display font-bold text-lg text-primary-foreground tracking-tight">
-                Abyssinia Advisory
+                Ababu Girma Accounting
               </span>
             </div>
             <p className="text-primary-foreground/60 text-sm leading-relaxed max-w-sm">
-              A leading accounting and tax advisory firm in Addis Ababa, serving Ethiopian businesses since 2006. AABE registered, IFRS compliant.
+              Ababu Girma Authorized Accounting Firm — a trusted accounting and tax advisory practice in Gulele (Addisu Gebeya area), Addis Ababa. Serving Ethiopian businesses with integrity.
             </p>
           </div>
 
@@ -41,7 +41,7 @@ const Footer = () => {
               {[
                 { label: "LinkedIn", href: "#" },
                 { label: "Telegram", href: "#" },
-                { label: "Email Us", href: "mailto:info@abyssinia-advisory.com" },
+                { label: "Email Us", href: "mailto:info@ababugirma-accounting.com" },
               ].map((item) => (
                 <li key={item.label}>
                   <a
@@ -59,7 +59,7 @@ const Footer = () => {
 
         <div className="mt-14 pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-primary-foreground/40">
-            © {new Date().getFullYear()} Abyssinia Advisory. All rights reserved.
+            © {new Date().getFullYear()} Ababu Girma Authorized Accounting Firm. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-xs text-primary-foreground/40 hover:text-primary-foreground/70 transition-colors">

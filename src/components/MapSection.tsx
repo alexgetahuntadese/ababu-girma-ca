@@ -42,7 +42,7 @@ const MapSection = () => {
           {/* Map iframe */}
           <iframe
             title="Office Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.5!2d38.763!3d9.015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwMDAnNTQuMCJOIDM4wrA0NSc0Ni44IkU!5e0!3m2!1sen!2set!4v1700000000000"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.3!2d38.74!3d9.04!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwMDInMjQuMCJOIDM4wrA0NCcyNC4wIkU!5e0!3m2!1sen!2set!4v1700000000000"
             className="w-full h-[350px] md:h-[450px] grayscale-[30%] contrast-[1.1]"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
@@ -63,12 +63,12 @@ const MapSection = () => {
                 </span>
               </div>
 
-              <h3 className="font-display font-bold text-lg text-foreground mb-1">Abyssinia Advisory</h3>
+              <h3 className="font-display font-bold text-lg text-foreground mb-1">Ababu Girma Authorized Accounting Firm</h3>
 
               <div className="space-y-2 mt-4 text-sm text-muted-foreground">
                 <div className="flex items-start gap-3">
                   <MapPin size={16} className="text-primary mt-0.5 shrink-0" />
-                  <span>Nani Building, 12th Floor, Kazanchis, Addis Ababa, Ethiopia</span>
+                  <span>Gulele (Addisu Gebeya area), Addis Ababa, Ethiopia</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Clock size={16} className="text-primary shrink-0" />
@@ -76,17 +76,17 @@ const MapSection = () => {
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone size={16} className="text-primary shrink-0" />
-                  <span>+251 11 551 2345</span>
+                  <span>+251 911 375 375</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Mail size={16} className="text-primary shrink-0" />
-                  <span>info@abyssinia-advisory.com</span>
+                  <span>info@ababugirma-accounting.com</span>
                 </div>
               </div>
 
               <Button asChild className="w-full mt-5 gradient-purple text-primary-foreground border-0 shadow-purple">
                 <a
-                  href="https://www.google.com/maps/dir//Kazanchis,+Addis+Ababa,+Ethiopia"
+                  href="https://www.google.com/maps/dir//Gulele,+Addisu+Gebeya,+Addis+Ababa,+Ethiopia"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
