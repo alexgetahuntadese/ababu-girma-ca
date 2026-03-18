@@ -86,7 +86,7 @@ const MapSection = () => {
 
               <Button asChild className="w-full mt-5 gradient-purple text-primary-foreground border-0 shadow-purple">
                 <a
-                  href="https://www.google.com/maps/dir//Kazanchis,+Addis+Ababa,+Ethiopia"
+                  href="https://www.google.com/maps/dir//Gulele,+Addisu+Gebeya,+Addis+Ababa,+Ethiopia"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

@@ -59,7 +59,7 @@ const Footer = () => {
 
         <div className="mt-14 pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-primary-foreground/40">
-            © {new Date().getFullYear()} Abyssinia Advisory. All rights reserved.
+            © {new Date().getFullYear()} Ababu Girma Authorized Accounting Firm. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-xs text-primary-foreground/40 hover:text-primary-foreground/70 transition-colors">
