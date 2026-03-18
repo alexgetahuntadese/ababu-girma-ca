@@ -80,7 +80,7 @@ const MapSection = () => {
                 </div>
                 <div className="flex items-center gap-3">
                   <Mail size={16} className="text-primary shrink-0" />
-                  <span>info@abyssinia-advisory.com</span>
+                  <span>info@ababugirma-accounting.com</span>
                 </div>
               </div>
 
