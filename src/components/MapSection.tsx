@@ -68,7 +68,7 @@ const MapSection = () => {
               <div className="space-y-2 mt-4 text-sm text-muted-foreground">
                 <div className="flex items-start gap-3">
                   <MapPin size={16} className="text-primary mt-0.5 shrink-0" />
-                  <span>Nani Building, 12th Floor, Kazanchis, Addis Ababa, Ethiopia</span>
+                  <span>Gulele (Addisu Gebeya area), Addis Ababa, Ethiopia</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Clock size={16} className="text-primary shrink-0" />
