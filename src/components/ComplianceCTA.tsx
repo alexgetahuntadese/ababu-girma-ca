@@ -5,45 +5,52 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { useToast } from "@/hooks/use-toast";
 
-const revenueBrackets = [
-  "Under ETB 500K",
-  "ETB 500K – 2M",
-  "ETB 2M – 10M",
-  "ETB 10M – 50M",
-  "Over ETB 50M",
+const legalNeeds = [
+  "Contract Drafting & Review",
+  "Litigation & Dispute Resolution",
+  "Mergers & Acquisitions",
+  "Company Formation & Licensing",
+  "Tax & Customs Advisory",
+  "Other",
 ];
 
 const industries = [
   "Manufacturing",
   "Import/Export",
   "Technology",
-  "Agriculture",
+  "Banking & Finance",
   "Real Estate",
-  "Hospitality",
-  "Retail",
+  "Energy & Mining",
+  "Construction",
   "Other",
 ];
 
-const employeeCounts = ["1 – 10", "11 – 50", "51 – 200", "201 – 500", "500+"];
+const urgencyLevels = [
+  "Immediate — active dispute or deadline",
+  "Within 30 days",
+  "Within 3 months",
+  "Planning ahead",
+  "Just exploring options",
+];
 
 const ComplianceCTA = () => {
   const [step, setStep] = useState(0);
-  const [revenue, setRevenue] = useState("");
+  const [legalNeed, setLegalNeed] = useState("");
   const [industry, setIndustry] = useState("");
-  const [employees, setEmployees] = useState("");
+  const [urgency, setUrgency] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const { toast } = useToast();
 
   const progress = ((step + 1) / 3) * 100;
 
   const canProceed =
-    (step === 0 && revenue) || (step === 1 && industry) || (step === 2 && employees);
+    (step === 0 && legalNeed) || (step === 1 && industry) || (step === 2 && urgency);
 
   const handleSubmit = () => {
     setSubmitted(true);
     toast({
-      title: "Report Requested! ✅",
-      description: "Our team will prepare your compliance assessment within 24 hours.",
+      title: "Consultation Requested! ✅",
+      description: "Our legal team will reach out within 24 hours to schedule your consultation.",
     });
   };
 
@@ -58,10 +65,10 @@ const ComplianceCTA = () => {
           >
             <CheckCircle2 size={56} className="text-primary-foreground mx-auto mb-6" />
             <h3 className="font-display font-bold text-2xl md:text-3xl text-primary-foreground mb-3">
-              Your Report Is On Its Way
+              Your Consultation Is Confirmed
             </h3>
             <p className="text-primary-foreground/80 text-lg">
-              We'll analyze your {industry.toLowerCase()} business ({revenue}, {employees} employees) and deliver a personalized compliance report within 24 hours.
+              We'll review your {legalNeed.toLowerCase()} matter in the {industry.toLowerCase()} sector and connect you with the right attorney within 24 hours.
             </p>
           </motion.div>
         </div>
@@ -80,12 +87,12 @@ const ComplianceCTA = () => {
             transition={{ duration: 0.5 }}
             className="text-center mb-10"
           >
-            <span className="text-primary font-semibold text-sm uppercase tracking-widest">Free Assessment</span>
+            <span className="text-primary font-semibold text-sm uppercase tracking-widest">Free Consultation</span>
             <h2 className="font-display font-800 text-3xl md:text-5xl text-foreground mt-3 tracking-tight">
-              The Compliance Engine
+              Get Expert Legal Advice
             </h2>
             <p className="text-muted-foreground mt-3 text-lg">
-              3 questions. 60 seconds. Get your personalized tax exposure report.
+              3 questions. 60 seconds. Connect with the right attorney for your case.
             </p>
           </motion.div>
 
@@ -115,15 +122,15 @@ const ComplianceCTA = () => {
                   transition={{ duration: 0.3 }}
                 >
                   <h3 className="font-display font-bold text-xl text-primary-foreground mb-6">
-                    What is your annual revenue bracket?
+                    What legal service do you need?
                   </h3>
                   <div className="grid gap-3">
-                    {revenueBrackets.map((r) => (
+                    {legalNeeds.map((r) => (
                       <button
                         key={r}
-                        onClick={() => setRevenue(r)}
+                        onClick={() => setLegalNeed(r)}
                         className={`w-full text-left px-5 py-4 rounded-xl border-2 transition-all text-sm font-medium ${
-                          revenue === r
+                          legalNeed === r
                             ? "border-accent bg-accent/20 text-primary-foreground"
                             : "border-primary-foreground/20 text-primary-foreground/80 hover:border-primary-foreground/40"
                         }`}
@@ -144,7 +151,7 @@ const ComplianceCTA = () => {
                   transition={{ duration: 0.3 }}
                 >
                   <h3 className="font-display font-bold text-xl text-primary-foreground mb-6">
-                    What industry are you in?
+                    What industry is your business in?
                   </h3>
                   <div className="grid grid-cols-2 gap-3">
                     {industries.map((ind) => (
@@ -173,15 +180,15 @@ const ComplianceCTA = () => {
                   transition={{ duration: 0.3 }}
                 >
                   <h3 className="font-display font-bold text-xl text-primary-foreground mb-6">
-                    How many employees do you have?
+                    How urgent is your matter?
                   </h3>
                   <div className="grid gap-3">
-                    {employeeCounts.map((e) => (
+                    {urgencyLevels.map((e) => (
                       <button
                         key={e}
-                        onClick={() => setEmployees(e)}
+                        onClick={() => setUrgency(e)}
                         className={`w-full text-left px-5 py-4 rounded-xl border-2 transition-all text-sm font-medium ${
-                          employees === e
+                          urgency === e
                             ? "border-accent bg-accent/20 text-primary-foreground"
                             : "border-primary-foreground/20 text-primary-foreground/80 hover:border-primary-foreground/40"
                         }`}
@@ -221,7 +228,7 @@ const ComplianceCTA = () => {
                   disabled={!canProceed}
                   className="gradient-purple text-primary-foreground border-0 shadow-purple animate-pulse-glow"
                 >
-                  Request Full Report
+                  Request Consultation
                   <ArrowRight size={16} className="ml-1" />
                 </Button>
               )}

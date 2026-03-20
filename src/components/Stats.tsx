@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: "18+", label: "Years of Service" },
-  { value: "500+", label: "Clients Served" },
-  { value: "99.7%", label: "Compliance Rate" },
-  { value: "₿2B+", label: "Assets Audited" },
+  { value: "15+", label: "Years of Practice" },
+  { value: "800+", label: "Cases Handled" },
+  { value: "97%", label: "Success Rate" },
+  { value: "350+", label: "Clients Represented" },
 ];
 
 const Stats = () => {
@@ -20,7 +20,7 @@ const Stats = () => {
         >
           <span className="text-primary font-semibold text-sm uppercase tracking-widest">Track Record</span>
           <h2 className="font-display font-800 text-3xl md:text-5xl text-foreground mt-3 tracking-tight">
-            Numbers That Speak Trust
+            Results That Build Confidence
           </h2>
         </motion.div>
 
@@ -52,7 +52,7 @@ const Stats = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="mt-14 flex flex-wrap items-center justify-center gap-6 md:gap-10 text-muted-foreground"
         >
-          {["ERCA Certified", "AABE Registered", "IFRS Compliant", "EPRDF Member Firm"].map((badge) => (
+          {["Ethiopian Bar Association", "AALCC Member", "ICC Arbitration", "ADR Certified"].map((badge) => (
             <div key={badge} className="flex items-center gap-2 text-sm font-medium">
               <div className="w-2 h-2 rounded-full bg-primary/60" />
               {badge}
