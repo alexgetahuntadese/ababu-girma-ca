@@ -45,7 +45,7 @@ const Index = () => {
               <Trophy className="w-8 h-8 text-white" />
             </div>
             <CardTitle className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-              QuizVerse Collab
+              Bisrat
             </CardTitle>
             <CardDescription className="text-gray-600">
               Join live quiz sessions with video collaboration
