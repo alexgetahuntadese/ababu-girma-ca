@@ -9,22 +9,22 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 rounded-lg gradient-purple flex items-center justify-center">
-                <span className="text-primary-foreground font-display font-bold">A</span>
+                <span className="text-primary-foreground font-display font-bold">B</span>
               </div>
               <span className="font-display font-bold text-lg text-primary-foreground tracking-tight">
-                Ababu Girma Accounting
+                Bisrat & Partners
               </span>
             </div>
             <p className="text-primary-foreground/60 text-sm leading-relaxed max-w-sm">
-              Ababu Girma Authorized Accounting Firm — a trusted accounting and tax advisory practice in Gulele (Addisu Gebeya area), Addis Ababa. Serving Ethiopian businesses with integrity.
+              Bisrat & Partners Law Office — an industrious business law office in Addis Ababa, staffed with distinguished lawyers specializing in diverse areas of practice. Serving local and foreign clients with excellence.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-display font-bold text-primary-foreground text-sm uppercase tracking-widest mb-4">Services</h4>
+            <h4 className="font-display font-bold text-primary-foreground text-sm uppercase tracking-widest mb-4">Practice Areas</h4>
             <ul className="space-y-2">
-              {["Audit & Assurance", "Tax Advisory", "Outsourcing", "Compliance"].map((item) => (
+              {["Litigation & Arbitration", "Corporate & Commercial", "Energy & Infrastructure", "Tax & Customs"].map((item) => (
                 <li key={item}>
                   <a href="#services" className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">
                     {item}
@@ -41,7 +41,7 @@ const Footer = () => {
               {[
                 { label: "LinkedIn", href: "#" },
                 { label: "Telegram", href: "#" },
-                { label: "Email Us", href: "mailto:info@ababugirma-accounting.com" },
+                { label: "Email Us", href: "mailto:info@bisratpartners.com" },
               ].map((item) => (
                 <li key={item.label}>
                   <a
@@ -59,7 +59,7 @@ const Footer = () => {
 
         <div className="mt-14 pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-primary-foreground/40">
-            © {new Date().getFullYear()} Ababu Girma Authorized Accounting Firm. All rights reserved.
+            © {new Date().getFullYear()} Bisrat & Partners Law Office. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-xs text-primary-foreground/40 hover:text-primary-foreground/70 transition-colors">

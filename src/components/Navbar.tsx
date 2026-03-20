@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { label: "Services", href: "#services" },
+  { label: "Practice Areas", href: "#services" },
   { label: "About", href: "#stats" },
   { label: "Contact", href: "#contact" },
 ];
@@ -22,10 +22,10 @@ const Navbar = () => {
       <div className="container flex items-center justify-between h-16 md:h-20">
         <a href="#" className="flex items-center gap-2">
           <div className="w-9 h-9 rounded-lg gradient-purple flex items-center justify-center">
-            <span className="text-primary-foreground font-display font-bold text-lg">A</span>
+            <span className="text-primary-foreground font-display font-bold text-lg">B</span>
           </div>
           <span className="font-display font-bold text-base text-foreground tracking-tight leading-tight">
-            Ababu Girma<br className="md:hidden" /><span className="hidden md:inline"> </span><span className="text-primary text-xs md:text-sm font-semibold">Authorized Accounting</span>
+            Bisrat & Partners<br className="md:hidden" /><span className="hidden md:inline"> </span><span className="text-primary text-xs md:text-sm font-semibold">Law Office</span>
           </span>
         </a>
 
@@ -41,7 +41,7 @@ const Navbar = () => {
             </a>
           ))}
           <Button asChild className="gradient-purple border-0 text-primary-foreground shadow-purple hover:shadow-purple-lg transition-shadow">
-            <a href="#cta">File Taxes</a>
+            <a href="#cta">Get Legal Counsel</a>
           </Button>
         </div>
 
@@ -76,7 +76,7 @@ const Navbar = () => {
                 </a>
               ))}
               <Button asChild className="gradient-purple border-0 text-primary-foreground w-full mt-2">
-                <a href="#cta" onClick={() => setIsOpen(false)}>File Taxes</a>
+                <a href="#cta" onClick={() => setIsOpen(false)}>Get Legal Counsel</a>
               </Button>
             </div>
           </motion.div>

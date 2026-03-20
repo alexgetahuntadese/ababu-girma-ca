@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Shield, TrendingUp } from "lucide-react";
+import { ArrowRight, Scale, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
@@ -19,8 +19,8 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary text-secondary-foreground text-sm font-medium mb-6"
           >
-            <Shield size={14} className="text-primary" />
-            Trusted by 500+ Ethiopian Businesses
+            <Scale size={14} className="text-primary" />
+            Distinguished Business Law Practice
           </motion.div>
 
           <motion.h1
@@ -29,9 +29,9 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-display font-900 text-4xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight text-foreground"
           >
-            Precision Accounting for the{" "}
-            <span className="text-gradient-purple">Addis Ababa</span>{" "}
-            Growth Engine
+            Industrious Legal Counsel for{" "}
+            <span className="text-gradient-purple">Complex</span>{" "}
+            Business Matters
           </motion.h1>
 
           <motion.p
@@ -40,7 +40,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed"
           >
-            Navigate Ethiopia's evolving tax landscape with confidence. From audit readiness to full compliance — we protect your growth.
+            Bisrat & Partners Law Office is staffed with distinguished lawyers who specialize in diverse areas of practice — from contract drafting and litigation to mergers, banking, and infrastructure.
           </motion.p>
 
           <motion.div
@@ -51,14 +51,14 @@ const Hero = () => {
           >
             <Button asChild size="lg" className="gradient-purple border-0 text-primary-foreground shadow-purple-lg hover:shadow-purple transition-all text-base h-13 px-8 rounded-xl">
               <a href="#cta">
-                Calculate Your Tax Exposure
+                Schedule a Consultation
                 <ArrowRight size={18} className="ml-1" />
               </a>
             </Button>
             <Button asChild variant="outline" size="lg" className="h-13 px-8 rounded-xl text-base border-border hover:bg-secondary">
               <a href="#services">
-                <TrendingUp size={18} className="mr-1 text-primary" />
-                Explore Services
+                <Briefcase size={18} className="mr-1 text-primary" />
+                Our Practice Areas
               </a>
             </Button>
           </motion.div>

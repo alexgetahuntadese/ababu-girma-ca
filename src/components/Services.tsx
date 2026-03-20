@@ -1,27 +1,27 @@
 import { motion } from "framer-motion";
-import { ShieldCheck, Calculator, Users } from "lucide-react";
+import { Scale, Gavel, Building2 } from "lucide-react";
 
 const services = [
   {
-    icon: ShieldCheck,
-    title: "Audit & Assurance",
+    icon: Scale,
+    title: "Litigation & Arbitration",
     description:
-      "Comprehensive audit services aligned with Ethiopian Standards on Auditing. We deliver investor-grade assurance for growing enterprises.",
-    features: ["Statutory Audits", "Internal Audit", "Due Diligence"],
+      "Experienced representation in complex disputes before courts and arbitration tribunals. We handle commercial litigation, contract disputes, and enforcement proceedings.",
+    features: ["Commercial Litigation", "Arbitration", "Contract Disputes"],
   },
   {
-    icon: Calculator,
-    title: "Tax Advisory",
+    icon: Gavel,
+    title: "Corporate & Commercial",
     description:
-      "Strategic tax planning across income tax, VAT, withholding tax, and customs. Minimize liability while maintaining full ERCA compliance.",
-    features: ["Tax Planning", "ERCA Compliance", "Transfer Pricing"],
+      "Strategic counsel on mergers and acquisitions, company formation, banking, competition law, and regulatory compliance for local and foreign clients.",
+    features: ["Mergers & Acquisitions", "Banking & Finance", "Company Law"],
   },
   {
-    icon: Users,
-    title: "Outsourcing & Compliance",
+    icon: Building2,
+    title: "Sector Expertise",
     description:
-      "End-to-end bookkeeping, payroll, and regulatory filings so you can focus on what matters — growing your business in Ethiopia.",
-    features: ["Payroll Processing", "Bookkeeping", "Monthly Reporting"],
+      "Deep knowledge across energy, infrastructure, real estate, mining, ICT, intellectual property, employment law, procurement, and tax and customs matters.",
+    features: ["Energy & Infrastructure", "Real Estate & Mining", "Tax & Customs"],
   },
 ];
 
@@ -45,9 +45,9 @@ const Services = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-14"
         >
-          <span className="text-primary font-semibold text-sm uppercase tracking-widest">What We Do</span>
+          <span className="text-primary font-semibold text-sm uppercase tracking-widest">Practice Areas</span>
           <h2 className="font-display font-800 text-3xl md:text-5xl text-foreground mt-3 tracking-tight">
-            Three Pillars of Financial Clarity
+            Three Pillars of Legal Excellence
           </h2>
         </motion.div>
 
