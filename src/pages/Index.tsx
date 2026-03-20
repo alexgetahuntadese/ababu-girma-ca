@@ -4,7 +4,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Users, Video, Trophy, Zap } from "lucide-react";
+import { Users, Video, Zap } from "lucide-react";
+import bisratLogo from "@/assets/bisrat-logo.png";
 import { useNavigate } from "react-router-dom";
 import { useSyncContext } from "@/contexts/SyncContext";
 import JoinSession from "@/components/JoinSession";
@@ -41,9 +42,7 @@ const Index = () => {
         
         <Card className="w-full max-w-md backdrop-blur-sm bg-white/90 shadow-2xl border-0 animate-scale-in">
           <CardHeader className="text-center space-y-4">
-            <div className="mx-auto w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
-              <Trophy className="w-8 h-8 text-white" />
-            </div>
+            <img src={bisratLogo} alt="Bisrat logo" className="mx-auto w-20 h-20 object-contain" />
             <CardTitle className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
               Bisrat
             </CardTitle>
@@ -102,9 +101,7 @@ const Index = () => {
       <header className="bg-white/10 backdrop-blur-md border-b border-white/20">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full flex items-center justify-center">
-              <Trophy className="w-5 h-5 text-white" />
-            </div>
+            <img src={bisratLogo} alt="Bisrat logo" className="w-8 h-8 object-contain" />
             <h1 className="text-xl font-bold text-white">Bisrat</h1>
           </div>
           <Button variant="ghost" className="text-white hover:bg-white/20">
