@@ -42,9 +42,7 @@ const Index = () => {
         
         <Card className="w-full max-w-md backdrop-blur-sm bg-white/90 shadow-2xl border-0 animate-scale-in">
           <CardHeader className="text-center space-y-4">
-            <div className="mx-auto w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
-              <Trophy className="w-8 h-8 text-white" />
-            </div>
+            <img src={bisratLogo} alt="Bisrat logo" className="mx-auto w-20 h-20 object-contain" />
             <CardTitle className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
               Bisrat
             </CardTitle>
