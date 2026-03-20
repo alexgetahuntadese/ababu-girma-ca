@@ -4,7 +4,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Users, Video, Trophy, Zap } from "lucide-react";
+import { Users, Video, Zap } from "lucide-react";
+import bisratLogo from "@/assets/bisrat-logo.png";
 import { useNavigate } from "react-router-dom";
 import { useSyncContext } from "@/contexts/SyncContext";
 import JoinSession from "@/components/JoinSession";
