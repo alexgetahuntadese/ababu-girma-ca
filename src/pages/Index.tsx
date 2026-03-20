@@ -101,9 +101,7 @@ const Index = () => {
       <header className="bg-white/10 backdrop-blur-md border-b border-white/20">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full flex items-center justify-center">
-              <Trophy className="w-5 h-5 text-white" />
-            </div>
+            <img src={bisratLogo} alt="Bisrat logo" className="w-8 h-8 object-contain" />
             <h1 className="text-xl font-bold text-white">Bisrat</h1>
           </div>
           <Button variant="ghost" className="text-white hover:bg-white/20">
